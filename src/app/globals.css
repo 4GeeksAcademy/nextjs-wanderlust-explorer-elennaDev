@@ -1,26 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tokens de Design References (ver CONTEXT.md) */
+@theme {
+  --color-sand: #f8f6f2;        /* fondo general de la app */
+  --color-petrol: #0e5a73;      /* primario: títulos, enlaces, estado activo */
+  --color-petrol-dark: #0b3b4a; /* barra superior, hover del primario */
+  --color-ink: #1a1a1a;         /* bandas negras, CTA, texto fuerte */
+  --color-stone: #6b6b6b;       /* texto secundario */
+  --color-line: #d9d6cf;        /* bordes y separadores */
+  --color-chip: #eceae5;        /* fondo de etiquetas */
+  --color-sun: #f5c400;         /* acento puntual: rating, destacados */
 }
 
+/* Fuentes cargadas con next/font (variables definidas en layout.tsx) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-cormorant), "Cormorant Garamond", serif;
+  --font-sans: var(--font-lato), "Lato", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-sand);
+  color: var(--color-ink);
 }
